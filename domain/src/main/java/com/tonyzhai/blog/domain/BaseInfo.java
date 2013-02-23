@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.domain;/** * Add some description * * @author Tony Zhai * @since 13-2-24 AM1:39 */public class BaseInfo {}
