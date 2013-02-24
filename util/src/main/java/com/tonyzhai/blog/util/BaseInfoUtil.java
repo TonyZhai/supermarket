@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.util;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM4:59 */public class BaseInfoUtil {}

@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.domain.base.domain.support;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM10:01 */public class DataPage {}

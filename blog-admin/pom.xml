@@ -9,11 +9,24 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tonyzhai.blog</groupId>
     <artifactId>blog-admin</artifactId>
     <packaging>jar</packaging>
     <name>Blog Admin</name>
     <url>http://www.tonyzhai.com/</url>
     <dependencies>
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>persistence</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>service</artifactId>
+        </dependency>
         <!-- General dependencies for standard applications -->
         <dependency>
             <groupId>junit</groupId>
@@ -389,6 +402,7 @@
                     <webAppConfig>
                         <contextPath>/${project.name}</contextPath>
                     </webAppConfig>
+                    <stopKey/>
                 </configuration>
             </plugin>
             <plugin>

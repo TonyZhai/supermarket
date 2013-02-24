@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.domain.base.domain.support.column;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM5:13 */public class BaseInfoColumn {}

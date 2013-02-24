@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.persistence.impl;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM5:16 */public class ArticleDaoImpl {}

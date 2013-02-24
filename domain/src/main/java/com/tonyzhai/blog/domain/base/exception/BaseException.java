@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.domain.base.exception;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM10:15 */public class BaseException {}

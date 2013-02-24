@@ -21,7 +21,7 @@ public class ApplicationConversionServiceFactoryBean extends FormattingConversio
 	}
 
 	public Converter<Topping, String> getToppingToStringConverter() {
-        return new org.springframework.core.convert.converter.Converter<com.tonyzhai.blog.domain.Topping, java.lang.String>() {
+        return new Converter<com.tonyzhai.blog.domain.Topping, String>() {
             public String convert(Topping topping) {
                 return new StringBuilder().append(topping.getName()).toString();
             }
@@ -29,15 +29,15 @@ public class ApplicationConversionServiceFactoryBean extends FormattingConversio
     }
 
 	public Converter<Long, Topping> getIdToToppingConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.Long, com.tonyzhai.blog.domain.Topping>() {
-            public com.tonyzhai.blog.domain.Topping convert(java.lang.Long id) {
+        return new Converter<Long, com.tonyzhai.blog.domain.Topping>() {
+            public com.tonyzhai.blog.domain.Topping convert(Long id) {
                 return Topping.findTopping(id);
             }
         };
     }
 
 	public Converter<String, Topping> getStringToToppingConverter() {
-        return new org.springframework.core.convert.converter.Converter<java.lang.String, com.tonyzhai.blog.domain.Topping>() {
+        return new Converter<String, com.tonyzhai.blog.domain.Topping>() {
             public com.tonyzhai.blog.domain.Topping convert(String id) {
                 return getObject().convert(getObject().convert(id, Long.class), Topping.class);
             }
