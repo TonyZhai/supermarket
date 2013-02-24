@@ -1,0 +1,1 @@
+var Blog_View = {};
