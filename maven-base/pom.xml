@@ -9,7 +9,116 @@
 	<packaging>pom</packaging>
 	<name>Maven Base</name>
 	<url>http://www.tonyzhai.com/</url>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.3.2</version>
+                <configuration>
+                    <source>1.6</source>
+                    <target>1.6</target>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-eclipse-plugin</artifactId>
+                <version>2.8</version>
+                <configuration>
+                    <downloadSources>true</downloadSources>
+                    <downloadJavadocs>true</downloadJavadocs>
+                </configuration>
+            </plugin>
+            <!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId>
+                   <version>2.1.2</version> <executions> <execution> <id>attach-sources</id>
+                   <goals> <goal>jar-no-fork</goal> </goals> </execution> </executions> </plugin -->
+            <!--plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId>
+                   <version>2.8.1</version> <executions> <execution> <id>attach-javadocs</id>
+                   <goals> <goal>jar-no-fork</goal> </goals> </execution> </executions> </plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-antrun-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <phase>generate-resources</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                        <configuration>
+                            <tasks>
+                                <!-- Safety -->
+                                <mkdir dir="${project.build.directory}" />
+                                <tstamp>
+                                    <format property="last.updated" pattern="yyyy-MM-dd HH:mm:ss" />
+                                </tstamp>
+                                <condition property="versionDir" value="${basedir}/src/main/resources"
+                                           else="${basedir}/target">
+                                    <equals arg1="war" arg2="${project.packaging}" />
+                                </condition>
+                                <echo file="${versionDir}/version.properties" message="buildinfo=V1.0-${last.updated}" />
+                            </tasks>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>net.alchim31.maven</groupId>
+                <artifactId>yuicompressor-maven-plugin</artifactId>
+                <version>1.1</version>
+            </plugin>
+        </plugins>
+        <pluginManagement>
+            <plugins>
+                <!--This plugin's configuration is used to store Eclipse m2e settings
+                        only. It has no influence on the Maven build itself. -->
+                <plugin>
+                    <groupId>org.eclipse.m2e</groupId>
+                    <artifactId>lifecycle-mapping</artifactId>
+                    <version>1.0.0</version>
+                    <configuration>
+                        <lifecycleMappingMetadata>
+                            <pluginExecutions>
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>
+                                            org.apache.maven.plugins
+                                        </groupId>
+                                        <artifactId>
+                                            maven-antrun-plugin
+                                        </artifactId>
+                                        <versionRange>
+                                            [1.3,)
+                                        </versionRange>
+                                        <goals>
+                                            <goal>run</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore></ignore>
+                                    </action>
+                                </pluginExecution>
 
+                                <!-- unpack plugin -->
+                                <pluginExecution>
+                                    <pluginExecutionFilter>
+                                        <groupId>org.apache.maven.plugins</groupId>
+                                        <artifactId>maven-dependency-plugin</artifactId>
+                                        <versionRange>[1.0.0,)</versionRange>
+                                        <goals>
+                                            <goal>unpack</goal>
+                                        </goals>
+                                    </pluginExecutionFilter>
+                                    <action>
+                                        <ignore />
+                                    </action>
+                                </pluginExecution>
+                            </pluginExecutions>
+                        </lifecycleMappingMetadata>
+                    </configuration>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
     <repositories>
         <repository>
             <id>spring-maven-release</id>
@@ -25,6 +134,12 @@
             <id>spring-roo-repository</id>
             <name>Spring Roo Repository</name>
             <url>http://spring-roo-repository.springsource.org/release</url>
+        </repository>
+
+        <repository>
+            <id>internal</id>
+            <name>blogInternal</name>
+            <url>file:///Users/tony/maven/target/deploy</url>
         </repository>
     </repositories>
 
@@ -49,6 +164,33 @@
 	<dependencyManagement>
 
 		<dependencies>
+
+            <dependency>
+                <groupId>com.tonyzhai.blog</groupId>
+                <artifactId>domain</artifactId>
+                <version>${platform-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tonyzhai.blog</groupId>
+                <artifactId>util</artifactId>
+                <version>${platform-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tonyzhai.blog</groupId>
+                <artifactId>security</artifactId>
+                <version>${platform-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tonyzhai.blog</groupId>
+                <artifactId>service</artifactId>
+                <version>${platform-version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.tonyzhai.blog</groupId>
+                <artifactId>persistence</artifactId>
+                <version>${platform-version}</version>
+            </dependency>
+
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -329,7 +471,15 @@
         </dependencies>
 	</dependencyManagement>
 
+    <distributionManagement>
+        <repository>
+            <id>internal</id>
+            <url>file:///Users/tony/maven/target/deploy</url>
+        </repository>
+    </distributionManagement>
+
     <properties>
+        <platform-version>0.0.1-SNAPSHOT</platform-version>
         <aspectj.version>1.7.0</aspectj.version>
         <java.version>1.6</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

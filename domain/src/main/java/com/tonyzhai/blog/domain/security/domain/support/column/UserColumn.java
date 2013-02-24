@@ -1,1 +1,1 @@
-package com.tonyzhai.blog.domain.security.domain.support.column;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM5:02 */public class UserColumn {}
+package com.tonyzhai.blog.domain.security.domain.support.column;/** * User column * * @author Tony Zhai * @since 13-2-24 PM5:02 */public enum UserColumn {}

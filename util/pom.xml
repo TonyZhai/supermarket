@@ -8,11 +8,16 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tonyzhai.blog</groupId>
     <artifactId>util</artifactId>
     <packaging>jar</packaging>
     <name>Util</name>
     <url>http://www.tonyzhai.com/</url>
 
     <dependencies>
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
     </dependencies>
 </project>

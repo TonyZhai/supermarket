@@ -9,8 +9,26 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
+    <groupId>com.tonyzhai.blog</groupId>
     <artifactId>persistence</artifactId>
     <packaging>jar</packaging>
     <name>Persistence</name>
     <url>http://www.tonyzhai.com/</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>domain</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.hibernate.javax.persistence</groupId>
+            <artifactId>hibernate-jpa-2.0-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+    </dependencies>
 </project>

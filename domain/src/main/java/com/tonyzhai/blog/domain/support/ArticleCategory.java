@@ -1,1 +1,1 @@
-package com.tonyzhai.blog.domain.support;/** * Article category * * @author Tony Zhai * @since 13-2-24 AM1:40 */public enum ArticleCategory {}
+package com.tonyzhai.blog.domain.support;/** * Article category * * @author Tony Zhai * @since 13-2-24 AM1:40 */public enum ArticleCategory {    technology}

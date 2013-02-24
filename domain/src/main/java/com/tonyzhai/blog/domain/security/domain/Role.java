@@ -1,1 +1,1 @@
-package com.tonyzhai.blog.domain.security.domain;/** * Add some description * * @author Tony Zhai * @since 13-2-24 PM5:12 */public class Role {}
+package com.tonyzhai.blog.domain.security.domain;/** * Role domain model * * @author Tony Zhai * @since 13-2-24 PM5:12 */public class Role {}
