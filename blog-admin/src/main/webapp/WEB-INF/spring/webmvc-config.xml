@@ -79,5 +79,4 @@
       </list>
     </property>
   </bean>
-    <!--<bean class="com.tonyzhai.blog.web.ApplicationConversionServiceFactoryBean" id="applicationConversionService"/>-->
 </beans>
