@@ -11,8 +11,8 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.tonyzhai.blog</groupId>
     <artifactId>blog-portal</artifactId>
-    <packaging>jar</packaging>
-    <name>Blog Portal</name>
+    <packaging>war</packaging>
+    <name>Portal</name>
     <url>http://www.tonyzhai.com/</url>
 
     <dependencies>

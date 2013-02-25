@@ -16,13 +16,13 @@
         <spring:message code="security_login_message" />
       </p>
     </c:if>
-    <spring:url value="/resources/j_spring_security_check" var="form_url" />
+    <spring:url value="/check" var="form_url" />
     <form name="f" action="${fn:escapeXml(form_url)}" method="POST">
       <div>
-        <label for="j_username">
+        <label for="username">
           <spring:message code="security_login_form_name" />
         </label>
-        <input id="j_username" type='text' name='j_username' style="width:150px" />
+        <input id="username" type='text' name='username' style="width:150px" />
         <spring:message code="security_login_form_name_message" var="name_msg" htmlEscape="false" />
         <script type="text/javascript">
           <c:set var="sec_name_msg">
@@ -33,10 +33,10 @@
       </div>
       <br />
       <div>
-        <label for="j_password">
+        <label for="password">
           <spring:message code="security_login_form_password" />
         </label>
-        <input id="j_password" type='password' name='j_password' style="width:150px" />
+        <input id="password" type='password' name='password' style="width:150px" />
         <spring:message code="security_login_form_password_message" var="pwd_msg" htmlEscape="false" />
         <script type="text/javascript">
           <c:set var="sec_pwd_msg">

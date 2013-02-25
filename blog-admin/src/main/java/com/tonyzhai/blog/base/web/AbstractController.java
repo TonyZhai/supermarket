@@ -1,0 +1,1 @@
+package com.tonyzhai.blog.base.web;/** * Abstract controller * * @author Tony Zhai * @since 13-2-25 PM9:29 */public class AbstractController {    protected String ajaxSuccess(){        return "{\"success\":\"true\"}";    }    protected String ajaxFailed(){        return "{\"failed\":\"true\"}";    }}
