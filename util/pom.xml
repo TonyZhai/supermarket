@@ -19,5 +19,10 @@
             <groupId>com.tonyzhai.blog</groupId>
             <artifactId>domain</artifactId>
         </dependency>
+
+        <dependency>
+            <groupId>com.tonyzhai.blog</groupId>
+            <artifactId>security</artifactId>
+        </dependency>
     </dependencies>
 </project>
