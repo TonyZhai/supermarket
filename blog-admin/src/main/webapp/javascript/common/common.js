@@ -1,1 +1,1 @@
-var Blog_View = {};
+var Blog_View = {};var Blog_Common = {};(function(common){    common.buildUrl = function(base, key, value) {        var sep = (base.indexOf('?') > -1) ? '&' : '?';        return base + sep + key + '=' + value;    }})(Blog_Common)

@@ -24,12 +24,12 @@
         </label>
         <input id="username" type='text' name='username' style="width:150px" />
         <spring:message code="security_login_form_name_message" var="name_msg" htmlEscape="false" />
-        <script type="text/javascript">
-          <c:set var="sec_name_msg">
-            <spring:escapeBody javaScriptEscape="true">${name_msg}</spring:escapeBody>
-          </c:set>
-          Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_username", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${sec_name_msg}", required : true}})); 
-        </script>
+        <%--<script type="text/javascript">--%>
+          <%--<c:set var="sec_name_msg">--%>
+            <%--<spring:escapeBody javaScriptEscape="true">${name_msg}</spring:escapeBody>--%>
+          <%--</c:set>--%>
+          <%--Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_username", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${sec_name_msg}", required : true}})); --%>
+        <%--</script>--%>
       </div>
       <br />
       <div>
@@ -38,16 +38,16 @@
         </label>
         <input id="password" type='password' name='password' style="width:150px" />
         <spring:message code="security_login_form_password_message" var="pwd_msg" htmlEscape="false" />
-        <script type="text/javascript">
-          <c:set var="sec_pwd_msg">
-            <spring:escapeBody javaScriptEscape="true">${pwd_msg}</spring:escapeBody>
-          </c:set>
-          Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_password", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${sec_pwd_msg}", required : true}})); 
-        </script>
+        <%--<script type="text/javascript">--%>
+          <%--<c:set var="sec_pwd_msg">--%>
+            <%--<spring:escapeBody javaScriptEscape="true">${pwd_msg}</spring:escapeBody>--%>
+          <%--</c:set>--%>
+          <%--Spring.addDecoration(new Spring.ElementDecoration({elementId : "j_password", widgetType : "dijit.form.ValidationTextBox", widgetAttrs : {promptMessage: "${sec_pwd_msg}", required : true}})); --%>
+        <%--</script>--%>
       </div>
       <br />
       <div class="submit">
-        <script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>
+        <%--<script type="text/javascript">Spring.addDecoration(new Spring.ValidateAllDecoration({elementId:'proceed', event:'onclick'}));</script>--%>
         <spring:message code="button_submit" var="submit_label" htmlEscape="false" />
         <input id="proceed" type="submit" value="${fn:escapeXml(submit_label)}" />
         <spring:message code="button_reset" var="reset_label" htmlEscape="false" />
