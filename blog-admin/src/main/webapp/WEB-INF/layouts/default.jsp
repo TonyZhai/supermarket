@@ -15,6 +15,8 @@
         <script type="text/javascript" src="${ctx}/static/javascript/plugins/jquery/ui/js/jquery-ui-1.10.1.custom.js"></script>
         <script type="text/javascript" src="${ctx}/static/javascript/plugins/jquery/jqgrid/js/i18n/grid.locale-cn.js"></script>
         <script type="text/javascript" src="${ctx}/static/javascript/plugins/jquery/jqgrid/js/jquery.jqGrid.src.js"></script>
+        <script type="text/javascript" src="${ctx}/static/javascript/plugins/underscore/underscore.js"></script>
+        <script type="text/javascript" src="${ctx}/static/javascript/plugins/backbone/backbone.js"></script>
         <script type="text/javascript" src="${ctx}/static/javascript/common/common.js"></script>
 	</head>
 

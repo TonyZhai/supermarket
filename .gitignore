@@ -16,7 +16,6 @@ test-output/
 *.bak
 *.log*
 *.lnk
-*.ogv
 bin-debug/
 *.wav
 javascripts_compress/
