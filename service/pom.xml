@@ -8,7 +8,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.tonyzhai.blog</groupId>
+    <groupId>com.tonyzhai.shop</groupId>
     <artifactId>service</artifactId>
     <packaging>jar</packaging>
     <name>Service</name>
@@ -16,17 +16,17 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.tonyzhai.blog</groupId>
+            <groupId>com.tonyzhai.shop</groupId>
             <artifactId>domain</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.tonyzhai.blog</groupId>
+            <groupId>com.tonyzhai.shop</groupId>
             <artifactId>persistence</artifactId>
         </dependency>
 
         <dependency>
-            <groupId>com.tonyzhai.blog</groupId>
+            <groupId>com.tonyzhai.shop</groupId>
             <artifactId>util</artifactId>
         </dependency>
 

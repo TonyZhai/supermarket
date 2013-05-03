@@ -1,0 +1,1 @@
+package com.tonyzhai.shop.util;/** * Constant * * @author Tony Zhai * @since 13-2-26 AM3:48 */public class Constant {    public static final String MAIL_HOST = "smtp.126.net";    public static final String DATE_FORMAT = "yyyy-MM-dd";}

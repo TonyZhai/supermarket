@@ -9,8 +9,8 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.tonyzhai.blog</groupId>
-    <artifactId>blog-portal</artifactId>
+    <groupId>com.tonyzhai.shop</groupId>
+    <artifactId>shop-portal</artifactId>
     <packaging>war</packaging>
     <name>Portal</name>
     <url>http://www.tonyzhai.com/</url>

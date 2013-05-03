@@ -9,7 +9,7 @@
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.tonyzhai.blog</groupId>
+    <groupId>com.tonyzhai.shop</groupId>
     <artifactId>security</artifactId>
     <packaging>jar</packaging>
     <name>Security</name>
@@ -17,7 +17,7 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.tonyzhai.blog</groupId>
+            <groupId>com.tonyzhai.shop</groupId>
             <artifactId>domain</artifactId>
         </dependency>
 

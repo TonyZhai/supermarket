@@ -1,0 +1,1 @@
+package com.tonyzhai.shop.web;import org.springframework.stereotype.Controller;import org.springframework.web.bind.annotation.RequestMapping;/** * Article Controller * * @author Tony Zhai * @since 13-2-24 AM2:09 */@RequestMapping("/articles")@Controllerpublic class ArticleController {}

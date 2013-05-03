@@ -8,7 +8,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.tonyzhai.parent</groupId>
-	<artifactId>Blog</artifactId>
+	<artifactId>Shop</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 
@@ -27,8 +27,8 @@
 		<module>service</module>
 		<module>persistence</module>
 		<module>domain</module>
-		<module>blog-admin</module>
-		<module>blog-portal</module>
+		<module>shop-admin</module>
+		<module>shop-portal</module>
         <module>security</module>
     </modules>
 </project>

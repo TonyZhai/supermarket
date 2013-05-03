@@ -138,7 +138,7 @@
 
         <repository>
             <id>internal</id>
-            <name>blogInternal</name>
+            <name>shopInternal</name>
             <url>file:///Users/tony/maven/target/deploy</url>
         </repository>
     </repositories>
@@ -166,27 +166,27 @@
 		<dependencies>
 
             <dependency>
-                <groupId>com.tonyzhai.blog</groupId>
+                <groupId>com.tonyzhai.shop</groupId>
                 <artifactId>domain</artifactId>
                 <version>${platform-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tonyzhai.blog</groupId>
+                <groupId>com.tonyzhai.shop</groupId>
                 <artifactId>util</artifactId>
                 <version>${platform-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tonyzhai.blog</groupId>
+                <groupId>com.tonyzhai.shop</groupId>
                 <artifactId>security</artifactId>
                 <version>${platform-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tonyzhai.blog</groupId>
+                <groupId>com.tonyzhai.shop</groupId>
                 <artifactId>service</artifactId>
                 <version>${platform-version}</version>
             </dependency>
             <dependency>
-                <groupId>com.tonyzhai.blog</groupId>
+                <groupId>com.tonyzhai.shop</groupId>
                 <artifactId>persistence</artifactId>
                 <version>${platform-version}</version>
             </dependency>
