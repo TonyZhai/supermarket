@@ -1,0 +1,1 @@
+var Blog_View = {    context:""};var Blog_Common = {};(function(common){    _.templateSettings = {        interpolate : /\{\{(.+?)\}\}/g    };    common.buildUrl = function(base, key, value) {        var sep = (base.indexOf('?') > -1) ? '&' : '?';        return base + sep + key + '=' + value;    }})(Blog_Common)

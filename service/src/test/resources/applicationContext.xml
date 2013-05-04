@@ -22,15 +22,15 @@
 
     <bean class="org.springframework.orm.jpa.support.PersistenceAnnotationBeanPostProcessor"/>
 
-    <bean id="articleDao" class="com.tonyzhai.blog.persistence.impl.ArticleDaoImpl"/>
+    <bean id="articleDao" class="com.tonyzhai.shop.persistence.impl.ArticleDaoImpl"/>
 
-    <bean id="goodsCategoryDao" class="com.tonyzhai.shop.portal.goods.persistence.impl.GoodsCategoryDaoImpl"/>
+    <bean id="goodsCategoryDao" class="com.tonyzhai.shop.persistence.portal.goods.impl.GoodsCategoryDaoImpl"/>
 
-    <bean id="articleService" class="com.tonyzhai.blog.service.impl.ArticleServiceImpl">
+    <bean id="articleService" class="com.tonyzhai.shop.service.impl.ArticleServiceImpl">
         <property name="articleDao" ref="articleDao"/>
     </bean>
 
-    <bean id="goodsCategoryService" class="com.tonyzhai.shop.portal.goods.service.impl.GoodsCategoryServiceImpl">
+    <bean id="goodsCategoryService" class="com.tonyzhai.shop.service.portal.goods.impl.GoodsCategoryServiceImpl">
         <property name="goodsCategoryDao" ref="goodsCategoryDao"/>
     </bean>
 

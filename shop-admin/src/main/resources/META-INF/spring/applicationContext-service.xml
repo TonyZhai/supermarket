@@ -11,7 +11,7 @@
        http://www.springframework.org/schema/aop
        http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-    <bean id="articleService" class="com.tonyzhai.blog.service.impl.ArticleServiceImpl">
+    <bean id="articleService" class="com.tonyzhai.shop.service.impl.ArticleServiceImpl">
         <property name="articleDao" ref="articleDao"/>
     </bean>
 
@@ -24,7 +24,7 @@
     </bean>
 
     <aop:config>
-        <aop:pointcut id="serviceMethods" expression="execution(* com.tonyzhai.blog.service.*.*(..))"/>
+        <aop:pointcut id="serviceMethods" expression="execution(* com.tonyzhai.shop.service.*.*(..))"/>
         <aop:advisor advice-ref="txAdvice" pointcut-ref="serviceMethods"/>
     </aop:config>
 
